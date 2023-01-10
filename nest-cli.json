@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "libs/application/src",
+  "projects": {
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "domain": {
+      "type": "library",
+      "root": "libs/domain",
+      "entryFile": "index",
+      "sourceRoot": "libs/domain/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/domain/tsconfig.lib.json"
+      }
+    },
+    "application": {
+      "type": "library",
+      "root": "libs/application",
+      "entryFile": "index",
+      "sourceRoot": "libs/application/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/application/tsconfig.lib.json"
+      }
+    },
+    "tracking-ms": {
+      "type": "application",
+      "root": "apps/tracking-ms",
+      "entryFile": "main",
+      "sourceRoot": "apps/tracking-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tracking-ms/tsconfig.app.json"
+      }
+    },
+    "enrollment-ms": {
+      "type": "application",
+      "root": "apps/enrollment-ms",
+      "entryFile": "main",
+      "sourceRoot": "apps/enrollment-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/enrollment-ms/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-microservices/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nestjs-microservices"
+}

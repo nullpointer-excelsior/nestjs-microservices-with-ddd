@@ -1,0 +1,7 @@
+export enum TripState {
+    REQUESTING = 'REQUESTING',
+    SCHEDULED = 'SCHEDULED',
+    IN_PROGRESS = 'IN_PROGRESS',
+    CANCELED = 'CANCELED',
+    COMPLETED = 'COMPLETED',
+}
